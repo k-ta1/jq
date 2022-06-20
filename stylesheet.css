@@ -1,0 +1,647 @@
+@charset "UTF-8";
+/* header navigation */
+.navigation {
+  width: 229px;
+  height: 361px;
+  background-color: #333333;
+  padding-top: 80px;
+  position: fixed;
+  z-index: 100;
+  transform: translateX(-100vw);
+  transition: all 0.3s linear;
+  top: 0;
+  left: 0;
+}
+@media screen and (min-width:1025px) {
+  .navigation {
+    transform: none;
+    width: 100%;
+    height: 80px;
+    padding-top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+  }
+}
+@media screen and (min-width:1280px) {
+  .navigation {
+    height: 110px;
+  }
+}
+.navigation.is-active {
+  transform: translateX(0);
+  overflow: auto;
+}
+
+@media screen and (min-width:1025px) {
+  .global-navigation {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.global-navigation__menu {
+  text-align: center;
+}
+@media screen and (min-width:1025px) {
+  .global-navigation__menu {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width:1280px) {
+  .global-navigation__menu {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: right;
+  }
+}
+.global-navigation__menu li {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: #fff !important;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+@media screen and (min-width:1025px) {
+  .global-navigation__menu li {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width:1280px) {
+  .global-navigation__menu li:last-child {
+    margin-right: 72px;
+  }
+}
+.global-navigation__menu li a {
+  display: block;
+  color: #fff;
+  line-height: 1em;
+}
+@media screen and (min-width:1025px) {
+  .global-navigation__menu li a {
+    padding: 28px 24px;
+  }
+}
+@media screen and (min-width:1280px) {
+  .global-navigation__menu li a {
+    padding: 43px 24px;
+  }
+}
+.global-navigation__menu li a:hover {
+  color: #333333;
+  background-color: #fff;
+  border-bottom: none;
+}
+
+/* fv */
+.fv {
+  width: 100%;
+  background-image: url(../img/fv.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  position: relative;
+  padding-top: 56.25%;
+}
+.fv h1 {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  font-size: 40px;
+  color: #fff;
+}
+@media screen and (min-width:768px) {
+  .fv h1 {
+    font-size: 72px;
+  }
+}
+@media screen and (min-width:1280px) {
+  .fv h1 {
+    font-size: 144px;
+  }
+}
+.fv p {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  font-size: 24px;
+  color: #fff;
+}
+@media screen and (min-width:768px) {
+  .fv p {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width:1280px) {
+  .fv p {
+    font-size: 48px;
+  }
+}
+
+.fv-black-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.3;
+}
+
+/* about */
+.about {
+  width: 100%;
+  text-align: center;
+}
+@media screen and (min-width:1280px) {
+  .about {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.about p {
+  margin: auto;
+  padding: 16px 20px;
+  text-align: left;
+}
+@media screen and (min-width:1280px) {
+  .about p {
+    width: 62.5%;
+    font-size: 24px;
+    margin: 0;
+    padding: 32px;
+  }
+}
+
+@media screen and (min-width:1280px) {
+  .selfimage {
+    width: 450px;
+  }
+}
+.selfimage img {
+  margin: 32px auto 0;
+}
+@media screen and (min-width:1280px) {
+  .selfimage img {
+    margin: 0;
+  }
+}
+
+/* other */
+.mail a:hover {
+  border-bottom: none;
+  opacity: 0.7;
+}
+
+.contact p {
+  text-align: center;
+}
+@media screen and (min-width:1280px) {
+  .contact p {
+    font-size: 24px;
+  }
+}
+
+.mail {
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* TAB */
+.tab {
+  width: 90vw;
+  margin: 32px auto 0;
+  text-align: center;
+  display: flex;
+}
+@media screen and (min-width:1280px) {
+  .tab {
+    width: 100%;
+  }
+}
+.tab li {
+  display: inline-block;
+  width: 80px;
+  height: 50px;
+  font-size: 18px;
+  padding: 16px 0;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  cursor: pointer;
+}
+@media screen and (min-width:1025px) {
+  .tab li {
+    width: 192px;
+    height: 60px;
+    font-size: 36px;
+    padding: 12px 0;
+  }
+}
+
+.all-tab.is-active {
+  color: #fff;
+  font-weight: bold;
+  background-color: #F0513C;
+  width: 79px;
+  margin-left: 1px;
+}
+@media screen and (min-width:1025px) {
+  .all-tab.is-active {
+    width: 192px;
+    height: 60px;
+    margin-left: 1px;
+  }
+}
+
+.web-tab.is-active {
+  color: #fff;
+  font-weight: bold;
+  background-color: #2477F0;
+}
+
+.graphic-tab.is-active {
+  color: #fff;
+  font-weight: bold;
+  background-color: #80A310;
+}
+
+.other-tab.is-active {
+  color: #fff;
+  font-weight: bold;
+  background-color: #0846A3;
+}
+
+.contents-web, .contents-graphic, .contents-other {
+  margin: 0 16px 16px 0;
+}
+@media screen and (min-width:1280px) {
+  .contents-web, .contents-graphic, .contents-other {
+    margin-right: 32px;
+  }
+}
+
+.contents-list {
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+@media screen and (min-width:1280px) {
+  .contents-list {
+    width: 100%;
+  }
+}
+.contents-list li:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* TAG */
+.tag {
+  display: flex;
+  justify-content: left;
+  margin-top: 16px;
+}
+
+.web-tag li:first-child {
+  background-color: #2477F0;
+  padding: 4px 16px;
+  color: #fff;
+  font-weight: bold;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+.graphic-tag li:first-child {
+  background-color: #80A310;
+  padding: 4px 16px;
+  color: #fff;
+  font-weight: bold;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+.other-tag li:first-child {
+  background-color: #0846A3;
+  padding: 4px 16px;
+  color: #fff;
+  font-weight: bold;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+.tag li {
+  padding: 4px 0 4px 16px;
+}
+
+/* modal window */
+.contents-anima-pop, .contents-liliy-pop, .contents-liliylogo-pop, .contents-kanmi-pop, .contents-cocoda-pop {
+  display: none;
+  background: #fff;
+  margin: auto;
+  padding: 16px;
+  width: 95%;
+  height: 100%;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  overflow-y: scroll;
+  z-index: 400;
+}
+@media screen and (min-width:1280px) {
+  .contents-anima-pop, .contents-liliy-pop, .contents-liliylogo-pop, .contents-kanmi-pop, .contents-cocoda-pop {
+    width: 60%;
+    height: 100%;
+  }
+}
+
+.pop-overlay {
+  display: none;
+  height: 120%;
+  width: 100%;
+  background: black;
+  opacity: 0.7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 350;
+}
+
+.show {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.pop-img-pc {
+  width: 73%;
+}
+
+.pop-img-pc img {
+  width: 100%;
+  height: auto;
+}
+
+.pop-image-sp {
+  width: 23%;
+  margin-left: 4%;
+}
+
+.pop-image-sp img {
+  width: 100%;
+  height: auto;
+}
+
+.pop-info {
+  width: 100%;
+}
+@media screen and (min-width:1280px) {
+  .pop-info {
+    font-size: 24px;
+  }
+}
+
+.pop-info p {
+  font-size: 14px;
+}
+@media screen and (min-width:1025px) {
+  .pop-info p {
+    font-size: 24px;
+  }
+}
+
+.pop-image-sp img {
+  width: 100%;
+  height: auto;
+}
+
+.pop-text {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.pop-text p {
+  font-size: 14px;
+  line-height: 1.5em;
+}
+@media screen and (min-width:1025px) {
+  .pop-text p {
+    font-size: 18px;
+  }
+}
+
+.graphic-img {
+  width: 50%;
+}
+
+.graphic-img img {
+  max-width: 480px;
+  height: auto;
+}
+
+.close-wrapper {
+  width: 100%;
+}
+
+.close:hover {
+  opacity: 0.8;
+}
+
+.close {
+  width: 45px;
+  height: 45px;
+  margin: auto;
+  cursor: pointer;
+}
+
+/* skill */
+.skill dl {
+  padding: 0 20px;
+  margin: auto;
+}
+@media screen and (min-width:1280px) {
+  .skill dl {
+    padding: 0;
+  }
+}
+
+.skill dt {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+@media screen and (min-width:1280px) {
+  .skill dt {
+    font-size: 36px;
+  }
+}
+
+.skill dd {
+  font-size: 18px;
+  margin-bottom: 16px;
+  line-height: 1.5em;
+}
+@media screen and (min-width:1280px) {
+  .skill dd {
+    font-size: 24px;
+  }
+}
+
+/* footer */
+footer {
+  width: 100%;
+  height: 46px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #BBBBBB;
+  margin-top: 32px;
+  padding: 16px;
+}
+
+/* button */
+.o-menu-button {
+  position: fixed;
+  z-index: 200;
+  width: 45px;
+  height: 45px;
+  display: block;
+  background-image: url(../img/menu.png);
+  transition: all 0.3s linear;
+  top: 8px;
+  left: 8px;
+}
+
+.o-menu-button.close {
+  position: fixed;
+  z-index: 200;
+  width: 45px;
+  height: 45px;
+  display: block;
+  background-image: url(../img/close.png);
+  transition: all 0.3s linear;
+}
+
+.o-button {
+  width: 328px;
+  height: 60px;
+  margin: 0 auto 16px;
+  text-align: center;
+  background-color: #F0513C;
+  border-radius: 30px;
+}
+.o-button:hover {
+  border: none;
+  opacity: 0.8;
+}
+.o-button a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 18px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  border-radius: 30px;
+}
+
+.o-close-wrapper {
+  width: 100%;
+}
+
+.o-pop-close {
+  width: 45px;
+  height: 45px;
+  margin: auto;
+  cursor: pointer;
+}
+.o-pop-close:hover {
+  opacity: 0.8;
+}
+
+@media screen and (min-width:1025px) {
+  .o-menu-button, .o-menu-button.close {
+    display: none;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* 共通 */
+html {
+  font-family: "游明朝体", "Yu Mincho", YuMincho, sans-serif;
+}
+
+header, footer, main, nav, article, aside, section {
+  display: block;
+}
+
+.main {
+  max-width: 1280px;
+}
+@media screen and (min-width:1280px) {
+  .main {
+    margin: auto;
+  }
+}
+
+.wrapper {
+  position: relative;
+}
+
+h2 {
+  font-size: 36px;
+  margin-top: 32px;
+  text-align: center;
+}
+@media screen and (min-width:1025px) {
+  h2 {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width:1280px) {
+  h2 {
+    width: 100%;
+    font-size: 72px;
+    margin-bottom: 32px;
+    text-align: left;
+    border-bottom: 1px solid #000;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #000000;
+}
+@media screen and (min-width:1025px) {
+  h3 {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width:1280px) {
+  h3 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #000000;
+  }
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+a {
+  color: #1d9bf0;
+}
+
+a:hover {
+  border-bottom: 1px solid;
+}
+/*# sourceMappingURL=stylesheet.css.map */
